@@ -32,13 +32,14 @@ public class HocComboboxJList extends JFrame {
     JComboBox cbNumber;
     JList listNumber;
     JButton btnOk;
+
     public HocComboboxJList(String title) {
         super(title);
         addControls();
         addEvents();
     }
 
-    public void addControls() {
+    private void addControls() {
         Container container = getContentPane();
         container.setLayout(new BoxLayout(container, BoxLayout.Y_AXIS));
 
@@ -72,14 +73,13 @@ public class HocComboboxJList extends JFrame {
 
         pnList.add(scList);
         container.add(pnList);
-        
+
         JPanel pnOk = new JPanel();
         pnOk.setLayout(new FlowLayout());
         btnOk = new JButton("Ok");
         pnOk.add(btnOk);
         container.add(pnOk);
-        
-        
+
     }
 
     private void addEvents() {
@@ -100,15 +100,15 @@ public class HocComboboxJList extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 processViewDataList();
             }
-
-            private void processViewDataList() {
-                Object ob = listNumber.getSelectedValue();
-                int pos = listNumber.getSelectedIndex();
-                JOptionPane.showMessageDialog(null, "List: position selectd: " 
-                        + pos  + "\n" + "Value selected: " + ob);
-                
-            }
         });
+    }
+
+    private void processViewDataList() {
+        Object ob = listNumber.getSelectedValue();
+        int pos = listNumber.getSelectedIndex();
+        JOptionPane.showMessageDialog(null, "List: position selectd: "
+                + pos + "\n" + "Value selected: " + ob);
+
     }
 
     public void showWindows() {
