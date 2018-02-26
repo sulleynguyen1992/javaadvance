@@ -1,6 +1,8 @@
 package kytich.com.model;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable{
 	private String customerId;
 	private String name;
 	private String phone;

@@ -277,6 +277,7 @@ public class CustomerUI extends JFrame {
 		vipGroup.getCustomers().add(new Customer("cus2","Thang sulley","9749732421","thang22@hocmai.vn"));
 		vipGroup.getCustomers().add(new Customer("cus3","Binh Bong","21324325","binhbong@hocmai.vn"));
 		vipGroup.getCustomers().add(new Customer("cus4","Joy Hou","231535","joy@hocmai.vn"));
+		vipGroup.addCustomer(new Customer("cus5","Tester","2314214","tester@hocmai.vn"));
 		 
 		for(GroupCustomer groupCustomer : listGroupCustomer) {
 			DefaultMutableTreeNode nodeCustomerGroup = new DefaultMutableTreeNode(groupCustomer);
